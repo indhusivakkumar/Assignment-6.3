@@ -1,0 +1,45 @@
+Explain the working of below pig script commands with an example:
+1. LOAD:
+    Load command is used to load the data from a file system into a relation.
+    Syntax:  
+    Relation_name=Load 'Input file path ' USING ' function as schema;
+
+2. STORE:
+    Store command helps to  save the relation in a  file system.
+    Syntax:
+    STORE Relation_name INTO ' required_directory_path ' [USING function];
+
+3. DUMP:
+    Dump command is helpful for displaying the contents of relation 
+    on the console.It is used for the purpose of debugging.
+    Syntax:
+    Dump relation_name    
+
+4. FOREACH:
+    Foreach command is needed for generating the
+    specified transformation of data based on column data.
+    Syntax:
+    Relation_name= FOREACH Relation_name1 GENERATE (required data);    
+    
+5. FILTER:
+    Filter is used to remove the unwanted rows from the relation and select only 
+    the required tuples from the relation based on certain condition.
+    Syntax:
+    Relation_name2=FILTER Relation_name1 BY (condition);
+
+6. GROUP BY:
+    Group by command is used to group the data in one or more relations.
+    It  is also used to collect the data that has the same key.
+    Syntax:
+    Group_data =GROUP Relation_name BY age;
+
+7. ORDER BY:
+     Order by command helps to display the content of the relation in sorted order either ascending or descending based
+     on one or more fields.
+    Syntax:
+    Relation_name2 = ORDER Relation_name1 BY (ASC|DESC);
+8. DESCRIBE
+:
+    Describe command is  used to view the schema of the relation.
+    Syntax:
+    Describe Relation_name
